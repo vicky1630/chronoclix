@@ -2,11 +2,11 @@
 
 ## Solving a Problem
 
-Problem: I need a place to gain inspiration for and document my writing 
+**Problem:** I need a place to gain inspiration for and document my writing 
 
-General App Idea/Purpose: This app allows user to create short stories that help with keeping a routine and growth in areas such as character development
+**General App Idea/Purpose:** This app allows user to create short stories that help with keeping a routine and growth in areas such as character development
 
-Who would use it: Writers
+**Who would use it:** Writers
 
 ## 10 User Stories - MVP
 
@@ -46,13 +46,15 @@ As a user, my upvote/like only counts once
 
 As a user, I should be able to add character profiles for the characters featured in the series 
 
-## Series vs Story
+## Chronoclix Terminology & Concepts
+
+### Series vs Story
 
 A series is an overall theme or plot. For example, a series could be a man travel to each of the fifty states for an introspective with his cat and dog. 
 
 The stories within that series can be short stories about the visits to each state. One could be about his night on the town with his pets in Orlando and another while he’s in the mountains afraid of bears in the Rocky’s. 
 
-## Character Info - Stretch Goal
+### Character Info - Stretch Goal
 
 Authors can use the character info sheets to add information for their characters featured in the series. Since the stories are aimed to be short stories, authors can use this to add additional depth to their characters. 
 
@@ -60,23 +62,26 @@ Authors can use the character info sheets to add information for their character
 
 #### MVP Models
 
-Series Model
+**Series Model**
 - series name
 - series creator 
 - genre (referenced)
 - stories (embedded)
-Story Model
+
+**Story Model**
 - story title
 - story body
-Genre model??
+
+**Genre model??**
 - genre 
 
 #### Stretch Models
 
-User Model
+**User Model**
 - user name
 - Series (embedded)??
-Character Model
+
+**Character Model**
 - name
 - age
 - ethnicity
