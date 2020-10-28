@@ -90,3 +90,7 @@ Authors can use the character info sheets to add information for their character
 
 ## Wire Frame
 
+![My MVP Wireframe Design](https://i.imgur.com/HHAmGlj.jpg)
+![My MVP Wireframe Design](https://i.imgur.com/qK1uQWS.jpg)
+
+
