@@ -3,7 +3,9 @@
 ## Solving a Problem
 
 Problem: I need a place to gain inspiration for and document my writing 
-General App Idea/Purpose: This app allows user to create short stories that help with keeping a routine and growth in areas such as character development 
+
+General App Idea/Purpose: This app allows user to create short stories that help with keeping a routine and growth in areas such as character development
+
 Who would use it: Writers
 
 ## 10 User Stories - MVP
@@ -56,7 +58,7 @@ Authors can use the character info sheets to add information for their character
 
 ## Models 
 
-#### MVP
+#### MVP Models
 
 Series Model
 - series name
@@ -80,3 +82,6 @@ Character Model
 - ethnicity
 - occupation
 - background
+
+## Wire Frame
+
