@@ -46,6 +46,10 @@ As a user, my upvote/like only counts once
 
 As a user, I should be able to add character profiles for the characters featured in the series 
 
+As a user, I should be able to only see series information and story titles if I am not logged in
+
+As a user, I should only see full stories when I am logged in
+
 ## Chronoclix Terminology & Concepts
 
 ### Series vs Story
