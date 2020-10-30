@@ -17,6 +17,7 @@ async function seed() {
   const fiftyStates = new Series({
     name: 'A Man and the Fifty States',
     creator:"Arthur McWord",
+    description:"A man travels the fifty states with his cat and dog and learns more about himself than he thought was possible. ",
     genre: "Comedy",
     stories: [],
   });
@@ -24,6 +25,7 @@ async function seed() {
   const myCousin = new Series({
     name: 'Not My Cousin',
     creator:"Moira Rose",
+    description:"Cousins, Annie and Magda, unravel family secrets that lead them to become suspicious of each other",
     genre: "Suspense",
     stories: [],
   });

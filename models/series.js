@@ -20,6 +20,11 @@ const seriesSchema = new mongoose.Schema({
     type: String,
     default: '',
   },
+  description:
+  {
+    type: String,
+    default: '',
+  },
   genre:
     {
       type: String,
