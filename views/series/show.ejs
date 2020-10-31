@@ -1,20 +1,22 @@
-<h1><%= series.name %>e</h1>
 
-<div class="genreTag"><%=series.genre%></div>
+  <h1 class="pageHeader"><%= series.name %></h1>
+
+<div class="card-panel red lighten-4 small-box"><%=series.genre%></div>
 </br>
 <h5>Description:</h5>
 
 <p><%= series.description%></p>
-
+<form action='/series/<%=series._id%>?_method=DELETE' method='POST'>
+  <button  class="btn btn-danger btn-sm" >DELETE ENTIRE SERIES </button>
+<ul>
 <h1>Stories</h1>
 
-<ul>
   <% series.stories.forEach(story => { %>
-  <li>
-    <a href="/series/<%= series.id %>/stories/<%= story.id %>/edit"
-      ><%= story.title %></a
-    >
-    <form
+  <li><div class="card-panel red lighten-2" id="story-list">
+    <a id="link" href="/series/<%= series.id %>/stories/<%= story.id %>/edit"
+      ><h6><%= story.title %></h6></a
+    ></div>
+    <form 
       action="/series/<%= series.id %>/stories/<%= story.id %>?_method=DELETE"
       method="POST"
     >
@@ -23,3 +25,4 @@
   </li>
   <% }) %>
 </ul>
+
