@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
   // store new song in memory with data from request body
   const newStory = new Story({ title: req.body.title }, { storyText: req.body.storyText });
 
-  // find album in db by id and add new song
+  // find album in db by id and add new story
   Series.findById(req.params.seriesId, (error, series) => {
     series.stories.push(newStory);
     series.save((err, series) => {
