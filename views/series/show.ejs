@@ -1,6 +1,6 @@
 
   <h1 class="pageHeader"><%= series.name %></h1>
-
+  <h6>Created By:<%=series.creator%></h6>
 <div class="card-panel red lighten-4 small-box"><%=series.genre%></div>
 </br>
 <h5>Description:</h5>
@@ -10,10 +10,10 @@
   <button  class="btn btn-danger btn-sm" >DELETE ENTIRE SERIES </button>
 <ul>
 <h1>Stories</h1>
-
+<a href="/series/newstory" id="createNew">Create A New Story</a>
   <% series.stories.forEach(story => { %>
   <li><div class="card-panel red lighten-2" id="story-list">
-    <a id="link" href="/series/<%= series.id %>/stories/<%= story.id %>/edit"
+    <a id="link" href="/series/<%= series.id %>/stories/<%= story.id %>"
       ><h6><%= story.title %></h6></a
     ></div>
     <form 
