@@ -33,6 +33,14 @@ router.get('/:seriesId', async (req, res) => {
   });
 
 });
+// STORY SHOW
+router.get('/:seriesId/stories/:storyId', async (req, res) => {
+  // find series in db by id and add new story
+  Story.findById(req.params.storyId, async (error, story) => {
+    res.render('series/story/show.ejs', { story });
+  });
+
+});
 
 // CREATE A NEW SERIES
 router.post('/', async (req, res) => {
