@@ -29,7 +29,7 @@
 </br>
 </br>
 <h4>Create a New story</h4>
-<form action="/series/" method="POST">
+<form action="/series/<%= series.id %>/stories/" method="POST">
     <div class="form-group">
         <label for="title">Story Title</label>
         <input type="text" class="form-control" id="title" name="title" />

@@ -50,9 +50,9 @@ router.post('/', async (req, res) => {
 });
 
 // CREATE STORY EMBEDDED IN SERIES
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   // store new song in memory with data from request body
-  const newStory = new Story({ title: req.body.title }, { storyText: req.body.storyText });
+  const newStory = await Story.create({ title: req.body.title }, { storyText: req.body.storyText });
 
   // find album in db by id and add new story
   Series.findById(req.params.seriesId, (error, series) => {
@@ -87,5 +87,21 @@ router.get('/:seriesId/edit', (req, res) => {
     })
   })
 })
+
+router.delete('/:seriesId/stories/:storyId', (req, res) => {
+  // set the value of the series and story ids
+  const seriesId = req.params.seriesId;
+  const storyId = req.params.storyId;
+
+  // find series in db by id
+  Series.findById(seriesId, (err, foundSeries) => {
+    // find story embedded in series
+    foundSeries.stories.id(storyId).remove();
+    // update story text and completed with data from request body
+    foundSeries.save((err, savedSeries) => {
+      res.redirect(`/series/${foundSeries.id}`);
+    });
+  });
+});
 
 module.exports = router;
