@@ -10,7 +10,7 @@
   <button  class="btn btn-danger btn-sm" >DELETE ENTIRE SERIES </button>
 <ul>
 <h1>Stories</h1>
-<a href="/series/newstory" id="createNew">Create A New Story</a>
+
   <% series.stories.forEach(story => { %>
   <li><div class="card-panel red lighten-2" id="story-list">
     <a id="link" href="/series/<%= series.id %>/stories/<%= story.id %>"
@@ -25,4 +25,20 @@
   </li>
   <% }) %>
 </ul>
+</form>
+</br>
+</br>
+<h4>Create a New story</h4>
+<form action="/series/" method="POST">
+    <div class="form-group">
+        <label for="title">Story Title</label>
+        <input type="text" class="form-control" id="title" name="title" />
+      </div>
+  <div class="form-group">
+    <label for="storyText">Story Body</label>
+    <input type="text" class="form-control" id="storyText" name="storyText" />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
 

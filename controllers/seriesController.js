@@ -17,6 +17,13 @@ router.get('/newseries', async (req, res) => {
   res.render('series/new.ejs');
 });
 
+// ADD EMPTY FORM TO SERIES SHOW PAGE TO ADD STORIES TO AS SERIES
+router.get('/:seriesId', (req, res) => {
+  // find serries in db by id and add new song
+  Series.findById(req.params.seriesId, (error, series) => {
+    res.render('series/show.ejs', { series });
+  });
+});
 
 // SERIES SHOW
 router.get('/:seriesId', async (req, res) => {
@@ -31,6 +38,20 @@ router.get('/:seriesId', async (req, res) => {
 router.post('/', async (req, res) => {
   Series.create(req.body, (error, series) => {
     res.redirect(`/series/${series.id}`);
+  });
+});
+
+// CREATE STORY EMBEDDED IN SERIES
+router.post('/', (req, res) => {
+  // store new song in memory with data from request body
+  const newStory = new Story({ title: req.body.title }, { storyText: req.body.storyText });
+
+  // find album in db by id and add new song
+  Series.findById(req.params.seriesId, (error, series) => {
+    series.stories.push(newStory);
+    series.save((err, series) => {
+      res.redirect("/series/");
+    });
   });
 });
 
