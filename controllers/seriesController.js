@@ -14,14 +14,14 @@ router.get('/', (req, res) => {
 
 // NEW SERIES FORM
 router.get('/newseries', async (req, res) => {
-  res.render('series/new.ejs');
+  res.render('series/new.ejs' , {currentUser: req.session.currentUser} );
 });
 
 // ADD EMPTY FORM TO SERIES SHOW PAGE TO ADD STORIES TO AS SERIES
 router.get('/:seriesId', (req, res) => {
   // find serries in db by id and add new story
   Series.findById(req.params.seriesId, (error, series) => {
-    res.render('series/show.ejs', { series });
+    res.render('series/show.ejs', { series ,  currentUser: req.session.currentUser} );
   });
 });
 
@@ -29,7 +29,7 @@ router.get('/:seriesId', (req, res) => {
 router.get('/:seriesId', async (req, res) => {
   // find series in db by id and add new story
   Series.findById(req.params.seriesId, async (error, series) => {
-    res.render('series/show.ejs', { series });
+    res.render('series/show.ejs', { series, currentUser: req.session.currentUser });
   });
 
 });
@@ -37,7 +37,7 @@ router.get('/:seriesId', async (req, res) => {
 router.get('/:seriesId/stories/:storyId', async (req, res) => {
   // find series in db by id and add new story
   Story.findById(req.params.storyId, async (error, story) => {
-    res.render('series/story/show.ejs', { story });
+    res.render('series/story/show.ejs', { story, currentUser: req.session.currentUser });
   });
 
 });
@@ -83,7 +83,7 @@ router.get('/:seriesId/edit', (req, res) => {
   Series.findById(req.params.seriesId, (error, foundSeries) => {
     res.render('series/edit.ejs', {
       series: foundSeries
-      // ,currentUser: req.session.currentUser
+      ,currentUser: req.session.currentUser
     })
   })
 })

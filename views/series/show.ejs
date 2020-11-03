@@ -15,13 +15,10 @@
   <li><div class="card-panel red lighten-2" id="story-list">
     <a id="link" href="/series/<%= series.id %>/stories/<%= story.id %>"
       ><h6><%= story.title %></h6></a
-    ></div>
-    <form 
-      action="/series/<%= series.id %>/stories/<%= story.id %>?_method=DELETE"
-      method="POST"
-    >
+    >    <form action="/series/<%= series.id %>/stories/<%= story.id %>?_method=DELETE" method="POST">
       <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-    </form>
+    </form></div>
+
   </li>
   <% }) %>
 </ul>
@@ -30,11 +27,11 @@
 </br>
 <h4>Create a New story</h4>
 <form action="/series/<%= series.id %>/stories" method="POST">
-    <div class="form-group">
+    <div class="form-group" id="story-title-box">
         <label for="title">Story Title</label>
         <input type="text" class="form-control" id="title" name="title" />
       </div>
-  <div class="form-group">
+  <div class="form-group" id="story-body-box">
     <label for="body">Story Body</label>
     <input type="text" class="form-control" id="body" name="body" />
   </div>

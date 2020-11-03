@@ -1,22 +1,24 @@
 //___________________
 //Dependencies
 //___________________
+require('dotenv').config()
 const express = require('express');
 const methodOverride  = require('method-override');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require ('mongoose');
 const app = express ();
 const db = mongoose.connection;
+const session = require('express-session')
 //___________________
 //Port
 //___________________
 // Allow use of Heroku's port or your own local port, depending on the environment
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 //___________________
 //Database
 //___________________
 // How to connect to the database either via heroku or locally
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'+ 'chroniclix';
+const MONGODB_URI = process.env.MONGODB_URI;
 // Connect to Mongo
 mongoose.connect(MONGODB_URI ,  {
     useNewUrlParser: true,
@@ -41,10 +43,24 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
+app.use(
+  session({
+    secret: process.env.SECRET, //a random string do not copy this value or your stuff will get hacked
+    resave: false, // default more info: https://www.npmjs.com/package/express-session#resave
+    saveUninitialized: false // default  more info: https://www.npmjs.com/package/express-session#resave
+  })
+)
+
 //___________________
 // Routes
 
 app.use('/series', require('./controllers/seriesController'));
+
+const userController = require('./controllers/userController.js')
+app.use('/users', userController)
+
+const sessionsController = require('./controllers/sessionsController.js')
+app.use('/sessions', sessionsController)
 
 //___________________
 //localhost:3000
