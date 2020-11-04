@@ -13,12 +13,9 @@ body {
     font-family: 'Syne Mono', monospace;
 }
 
-#link{
-    color: black;
-}
 
 #story-list {
-    width: 350px;
+    width: 550px;
     text-align: center;
     margin-top: 50px;
 }
@@ -26,3 +23,26 @@ body {
 #body{
     height: 400px;
 }
+
+#link {
+    color: black;
+}
+
+#link:hover {
+    color: #4DA8DA;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#link-new {
+    background: #ffcdd2;
+    color: black;
+}
+
+#link-new:hover {
+    color: #4DA8DA;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
