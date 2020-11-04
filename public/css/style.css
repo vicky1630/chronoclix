@@ -58,3 +58,20 @@ body {
 #login-signup {
     margin-left: 800px;
 }
+
+#welcome-container {
+    text-align: center;
+}
+
+.welcome-links {
+    font-size: 20px;
+    margin: 50px 50px 50px 50px;
+    color: black;
+}
+
+.welcome-links:hover {
+    color: #4DA8DA;
+    text-decoration: none;
+    font-size: 35px;
+    background: yellow;
+}
