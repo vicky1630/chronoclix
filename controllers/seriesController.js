@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   Series.find({}, (error, allSeries) => {
     res.render('series/index.ejs', {
       series: allSeries
-      // ,currentUser: req.session.currentUser
+      ,currentUser: req.session.currentUser
     })
   })
 })

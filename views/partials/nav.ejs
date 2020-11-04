@@ -6,10 +6,10 @@
             <a class="nav-link" href="/series/">All Series</a>
           </li>
           <% if (currentUser) { %>
-            <li>Welcome <%= currentUser.username %></li>
+            <li id="welcome-user">Welcome <%= currentUser.username %>!</li>
             <li>
               <form action="/sessions?_method=DELETE" method="POST">
-                <input type="submit" value="Log Out" class="btn-small red" />
+                <input type="submit" value="Log Out" class="btn-small red" id="logout"/>
               </form>
             </li>
             <% } else { %>
