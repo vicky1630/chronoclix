@@ -1,3 +1,4 @@
+<% if (currentUser) { %>
 <button class="btn btn-primary" onclick="goBack()">Back to Series</button>
 
 <h1><%=story.title%></h1>
@@ -9,3 +10,7 @@ function goBack() {
   window.history.back();
 }
 </script>
+
+  <% } else { %>
+<h1>LOG IN TO SEE STORIES</h1>
+  <% } %>
