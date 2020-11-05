@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 
+
+
 .pageHeader {
     text-align: center;
 }
@@ -13,12 +15,6 @@ body {
     font-family: 'Syne Mono', monospace;
 }
 
-
-#story-list {
-    width: 550px;
-    text-align: center;
-    margin-top: 50px;
-}
 
 #body{
     height: 400px;
@@ -47,12 +43,12 @@ body {
 
 #welcome-user {
     color: black;
-    margin-left: 275px;
+    margin-left: 600px;
     font-size: 20px;
 }
 
 #logout {
-    margin-left: 300px;
+    margin-left: 600px;
 }
 
 #welcome-container {
@@ -121,7 +117,11 @@ p {
     from{border-right-color: rgba(0,255,0,.75);}
     to{border-right-color: transparent;}
   }
-  
-  
-  
-  Resources
+
+  #story-title {
+    text-align: center;
+    font-size: 30px;
+}
+#story-title:hover {
+    font-size: 65px;
+}

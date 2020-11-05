@@ -1,7 +1,7 @@
 <%- include ('../partials/nav.ejs') %>
   <h1 class="pageHeader"><%= series.name %></h1>
   <h6>Created By:<%=series.creator%></h6>
-<div class="card-panel red lighten-4 small-box"><%=series.genre%></div>
+<div class="card-panel red lighten-5 small-box"><%=series.genre%></div>
 </br>
 <h5><%= series.description%></h5>
 </br>
@@ -13,7 +13,7 @@
   <% series.stories.forEach(story => { %>
   <li><div class="card-panel red lighten-2" id="story-list">
     <a id="link" href="/series/<%= series.id %>/stories/<%= story.id %>"
-      ><h6><%= story.title %></h6></a
+      ><h6 id="story-title"><%= story.title %></h6></a
     >    <form action="/series/<%= series.id %>/stories/<%= story.id %>?_method=DELETE" method="POST">
       <button type="submit" class="btn btn-danger btn-sm">Delete</button>
     </form></div>
