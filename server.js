@@ -65,7 +65,7 @@ app.use('/sessions', sessionsController)
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.render('welcome.ejs', {currentUser: req.session.currentUser});
+  res.render('welcome.ejs', {currentUser: req.session.currentUser, hideNav: true});
 });
 //___________________
 //Listener

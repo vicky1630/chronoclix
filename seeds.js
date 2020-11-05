@@ -13,6 +13,7 @@ mongoose.connect(
 );
 
 async function seed() {
+
 // Create Series
   const fiftyStates = new Series({
     name: 'A Man and the Fifty States',
@@ -84,6 +85,9 @@ async function seed() {
       console.log( savedSeries);
     }
   });
+
+
+
 
 }
 

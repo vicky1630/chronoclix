@@ -1,11 +1,10 @@
-
+<%- include ('../partials/nav.ejs') %>
   <h1 class="pageHeader"><%= series.name %></h1>
   <h6>Created By:<%=series.creator%></h6>
 <div class="card-panel red lighten-4 small-box"><%=series.genre%></div>
 </br>
-<h5>Description:</h5>
-
-<p><%= series.description%></p>
+<h5><%= series.description%></h5>
+</br>
 <form action='/series/<%=series._id%>?_method=DELETE' method='POST'>
   <button  class="btn btn-danger btn-sm" >DELETE ENTIRE SERIES </button>
 <ul>

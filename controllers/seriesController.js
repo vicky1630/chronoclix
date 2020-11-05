@@ -3,12 +3,10 @@ const Series = require('../models/series').Series;
 const Story = require('../models/series').Story;
 
 // SERIES INDEX
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   Series.find({}, (error, allSeries) => {
     res.render('series/index.ejs', {
-      series: allSeries
-      ,currentUser: req.session.currentUser
-    })
+      series: allSeries,currentUser: req.session.currentUser})
   })
 })
 
@@ -77,6 +75,8 @@ router.put('/:seriesId', (req, res) => {
   });
 
 })
+
+
 
 // EDIT SERIES
 router.get('/:seriesId/edit', (req, res) => {

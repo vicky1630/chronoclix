@@ -1,10 +1,11 @@
+<%- include ('../partials/nav.ejs') %>
 <h1 class="pageHeader">Chroniclix Series</h1>
 <a href="/series/newseries" id="link-new">Create A New Series</a>
 <ul>
     <% for (let i =0; i <series.length; i++) { %>
     <li>
      <div class="card-panel red lighten-4">
-         <div><%=series[i].genre%></div>  
+         <div><%=series[i].genre%></div>
          <a id="link" href="/series/<%=series[i]._id%>">
             <h4><b><%=series[i].name%></b></h4></a> 
               <h6>Created By:<%=series[i].creator%></h6>

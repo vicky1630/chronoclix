@@ -25,11 +25,10 @@ const seriesSchema = new mongoose.Schema({
     type: String,
     default: '',
   },
-  genre:
-    {
-      type: String,
-      default: '',
-    },
+  genre:  {
+    type: String,
+    default: '',
+  },
   stories: [storySchema]
 }, { timestamps: true });
 

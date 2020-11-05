@@ -39,7 +39,7 @@ router.post('/', (req, res) => {
         res.redirect('/series/')
       } else {
         // passwords do not match
-        res.send('<a href="/"> password does not match </a>')
+        res.send('<a href="/series"> password does not match: GO BACK </a>')
       }
     }
   })

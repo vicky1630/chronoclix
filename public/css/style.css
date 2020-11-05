@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 
 .pageHeader {
-    background: #e3f2fd;
+    text-align: center;
 }
 
 .small-box {
@@ -55,12 +55,9 @@ body {
     margin-left: 300px;
 }
 
-#login-signup {
-    margin-left: 800px;
-}
-
 #welcome-container {
     text-align: center;
+    margin-top: 15%;
 }
 
 .welcome-links {
@@ -70,8 +67,61 @@ body {
 }
 
 .welcome-links:hover {
-    color: #4DA8DA;
+    color: #f2b36c;
     text-decoration: none;
     font-size: 35px;
-    background: yellow;
+    background: #90669e;
+    padding: 10px 10px 10px 10px;
+    border-radius: 50%;
 }
+
+body {
+	background: linear-gradient(-45deg,	#f2dc59, #f2b36c, #e58c7a, #bb6896);
+	background-size: 700% 700%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+p {
+    border-right: solid 3px rgba(0,255,0,.75);
+    white-space: nowrap;
+    overflow: hidden;    
+    font-size: 28px;
+    color: #000000;
+  }
+  
+  /* Animation */
+  p {
+    animation: animated-text 6s steps(29,end) 1s 1 normal both,
+               animated-cursor 600ms steps(29,end) infinite;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 1800px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: rgba(0,255,0,.75);}
+    to{border-right-color: transparent;}
+  }
+  
+  
+  
+  Resources
