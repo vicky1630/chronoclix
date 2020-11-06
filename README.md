@@ -8,7 +8,7 @@
 
 **Who would use it:** Writers
 
-### User Stories - MVP
+### User Stories 
 
 As a user, I should be able to create a series that holds a description of what the stories are about 
 
@@ -40,8 +40,6 @@ The stories within that series can be short stories about the visits to each sta
 
 ## Models 
 
-#### MVP Models
-
 **Series Model**
 - series name
 - series creator 
@@ -56,13 +54,16 @@ The stories within that series can be short stories about the visits to each sta
 - user name
 - password
 
-
 ## Wire Frame
-
-### MVP
 
 ![My MVP Wireframe Design](https://i.imgur.com/qK1uQWS.jpg)
 ![My MVP Wireframe Design](https://i.imgur.com/HHAmGlj.jpg)
 
+## Technology Used
+
+* Express
+* EJS
+* Node JS
+* APIs
 
 
