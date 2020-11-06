@@ -46,6 +46,8 @@ The stories within that series can be short stories about the visits to each sta
 - genre
 - stories (embedded)
 
+![Full CRUD](https://i.imgur.com/gfEFzEG.jpg)
+
 **Story Model**
 - story title
 - story body
@@ -69,4 +71,7 @@ The stories within that series can be short stories about the visits to each sta
   * Typewriter effect on welcome page (https://www.codesdope.com/blog/article/creating-typewriter-text-animation-using-css/)
 * Materialize 
 
+## Link to Heroku App
+
+https://chroniclix.herokuapp.com/
 
