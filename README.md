@@ -69,6 +69,7 @@ The stories within that series can be short stories about the visits to each sta
 * APIs
   * AJAX/cloudflare (https://tobiasahlin.com/moving-letters/)
   * Typewriter effect on welcome page (https://www.codesdope.com/blog/article/creating-typewriter-text-animation-using-css/)
+  * Background: https://1stwebdesigner.com/15-css-background-effects/
 * Materialize 
 * MongoDB
 
