@@ -43,7 +43,7 @@ The stories within that series can be short stories about the visits to each sta
 **Series Model**
 - series name
 - series creator 
-- genre (referenced)
+- genre
 - stories (embedded)
 
 **Story Model**
