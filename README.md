@@ -8,7 +8,7 @@
 
 **Who would use it:** Writers
 
-User Stories - MVP
+### User Stories - MVP
 
 As a user, I should be able to create a series that holds a description of what the stories are about 
 
@@ -29,25 +29,6 @@ As a user, I should be able to log into an account and find my series using a us
 As a user, I should be able to only see series information and story titles if I am not logged in
 
 As a user, I should only see full stories when I am logged in
-
-## nice to haves
-
-As a user, I should be able to like/upvote a series/individual stories
-
-As a user, I should be able to add multiple genres to a series
-
-As a user, I should be able to edit a title and body of a story 
-
-As a user, I should get a confirmation before permanently deleting a series or story
-
-As a user, I should be able to manage multiple series 
-
-As a user, I should be able to make a series private (only I can add stories) or public (anyone can add a story) 
-
-As a user, my upvote/like only counts once 
-
-As a user, I should be able to add character profiles for the characters featured in the series 
-
 
 ## Chronoclix Terminology & Concepts
 
@@ -73,7 +54,7 @@ The stories within that series can be short stories about the visits to each sta
 
 **User Model**
 - user name
-- Series (embedded)??
+- password
 
 
 ## Wire Frame
