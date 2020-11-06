@@ -1,7 +1,9 @@
 <%- include ('../partials/nav.ejs') %>
 <% if (currentUser) { %>
 <h1>Create a New Series</h1>
-<form action="/series" method="POST">
+    <button class="btn btn-primary" onclick="goBack()">Back to Series</button>
+  </br></br>
+    <form action="/series" method="POST">
     <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" name="name" />
@@ -21,11 +23,12 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     <% } else { %>
-      <button class="btn btn-primary" onclick="goBack()">Back to Series</button>
+  
       <div class="card-panel teal lighten-2"><h1>YOU MUST LOG IN TO CREATE A SERIES</h1></div>
-      <script>
+    <% } %>  
+<script>
         function goBack() {
           window.history.back();
         }
         </script>
-        <% } %>
+      

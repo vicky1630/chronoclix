@@ -31,9 +31,10 @@ router.get('/:seriesId', async (req, res) => {
   });
 
 });
+
 // STORY SHOW
 router.get('/:seriesId/stories/:storyId', async (req, res) => {
-  // find series in db by id and add new story
+// find series in db by id and add new story
   Story.findById(req.params.storyId, async (error, story) => {
     res.render('series/story/show.ejs', { story, currentUser: req.session.currentUser });
   });
@@ -49,10 +50,10 @@ router.post('/', async (req, res) => {
 
 // CREATE STORY EMBEDDED IN SERIES
 router.post('/:seriesId/stories/', async (req, res) => {
-  // store new story in memory with data from request body
+// store new story in memory with data from request body
   const newStory = await Story.create({ title: req.body.title , body: req.body.body });
 
-  // find series in db by id and add new story
+// find series in db by id and add new story
   Series.findById(req.params.seriesId, (error, series) => {
     series.stories.push(newStory);
     series.save((err, series) => {
@@ -76,8 +77,6 @@ router.put('/:seriesId', (req, res) => {
 
 })
 
-
-
 // EDIT SERIES
 router.get('/:seriesId/edit', (req, res) => {
   Series.findById(req.params.seriesId, (error, foundSeries) => {
@@ -88,16 +87,15 @@ router.get('/:seriesId/edit', (req, res) => {
   })
 })
 
+//DELETE ROUTE
 router.delete('/:seriesId/stories/:storyId', (req, res) => {
-  // set the value of the series and story ids
   const seriesId = req.params.seriesId;
   const storyId = req.params.storyId;
-
-  // find series in db by id
+// find series in db by id
   Series.findById(seriesId, (err, foundSeries) => {
-    // find story embedded in series
+// find story embedded in series
     foundSeries.stories.id(storyId).remove();
-    // update story text and completed with data from request body
+// update story text and completed with data from request body
     foundSeries.save((err, savedSeries) => {
       res.redirect(`/series/${foundSeries.id}`);
     });

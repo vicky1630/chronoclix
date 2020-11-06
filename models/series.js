@@ -32,7 +32,6 @@ const seriesSchema = new mongoose.Schema({
   stories: [storySchema]
 }, { timestamps: true });
 
-
 const Story = mongoose.model('Story', storySchema);
 const Series = mongoose.model('Series', seriesSchema);
 
